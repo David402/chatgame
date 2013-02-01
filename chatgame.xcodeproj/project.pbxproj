@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D78DDAA316BBA21A0079CE7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DDAA216BBA21A0079CE7C /* UIKit.framework */; };
+		D78DDAA516BBA21A0079CE7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DDAA416BBA21A0079CE7C /* Foundation.framework */; };
+		D78DDAA716BBA21A0079CE7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DDAA616BBA21A0079CE7C /* CoreGraphics.framework */; };
+		D78DDAAD16BBA21A0079CE7C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAAB16BBA21A0079CE7C /* InfoPlist.strings */; };
+		D78DDAAF16BBA21A0079CE7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDAAE16BBA21A0079CE7C /* main.m */; };
+		D78DDAB316BBA21A0079CE7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDAB216BBA21A0079CE7C /* AppDelegate.m */; };
+		D78DDAB516BBA21A0079CE7C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAB416BBA21A0079CE7C /* Default.png */; };
+		D78DDAB716BBA21A0079CE7C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAB616BBA21A0079CE7C /* Default@2x.png */; };
+		D78DDAB916BBA21A0079CE7C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAB816BBA21A0079CE7C /* Default-568h@2x.png */; };
+		D78DDABC16BBA21A0079CE7C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDABB16BBA21A0079CE7C /* FirstViewController.m */; };
+		D78DDABE16BBA21A0079CE7C /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDABD16BBA21A0079CE7C /* first.png */; };
+		D78DDAC016BBA21A0079CE7C /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDABF16BBA21A0079CE7C /* first@2x.png */; };
+		D78DDAC316BBA21A0079CE7C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDAC216BBA21A0079CE7C /* SecondViewController.m */; };
+		D78DDAC516BBA21A0079CE7C /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAC416BBA21A0079CE7C /* second.png */; };
+		D78DDAC716BBA21A0079CE7C /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAC616BBA21A0079CE7C /* second@2x.png */; };
+		D78DDACA16BBA21A0079CE7C /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAC816BBA21A0079CE7C /* FirstViewController_iPhone.xib */; };
+		D78DDACD16BBA21A0079CE7C /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78DDACB16BBA21A0079CE7C /* FirstViewController_iPad.xib */; };
+		D78DDAD016BBA21A0079CE7C /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78DDACE16BBA21A0079CE7C /* SecondViewController_iPhone.xib */; };
+		D78DDAD316BBA21A0079CE7C /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAD116BBA21A0079CE7C /* SecondViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D78DDA9E16BBA21A0079CE7C /* chatgame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatgame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D78DDAA216BBA21A0079CE7C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D78DDAA416BBA21A0079CE7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D78DDAA616BBA21A0079CE7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D78DDAAA16BBA21A0079CE7C /* chatgame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "chatgame-Info.plist"; sourceTree = "<group>"; };
+		D78DDAAC16BBA21A0079CE7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D78DDAAE16BBA21A0079CE7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D78DDAB016BBA21A0079CE7C /* chatgame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "chatgame-Prefix.pch"; sourceTree = "<group>"; };
+		D78DDAB116BBA21A0079CE7C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D78DDAB216BBA21A0079CE7C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D78DDAB416BBA21A0079CE7C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D78DDAB616BBA21A0079CE7C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D78DDAB816BBA21A0079CE7C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D78DDABA16BBA21A0079CE7C /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		D78DDABB16BBA21A0079CE7C /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		D78DDABD16BBA21A0079CE7C /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		D78DDABF16BBA21A0079CE7C /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		D78DDAC116BBA21A0079CE7C /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		D78DDAC216BBA21A0079CE7C /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D78DDAC416BBA21A0079CE7C /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		D78DDAC616BBA21A0079CE7C /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		D78DDAC916BBA21A0079CE7C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
+		D78DDACC16BBA21A0079CE7C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
+		D78DDACF16BBA21A0079CE7C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
+		D78DDAD216BBA21A0079CE7C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D78DDA9B16BBA21A0079CE7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D78DDAA316BBA21A0079CE7C /* UIKit.framework in Frameworks */,
+				D78DDAA516BBA21A0079CE7C /* Foundation.framework in Frameworks */,
+				D78DDAA716BBA21A0079CE7C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D78DDA9316BBA21A0079CE7C = {
+			isa = PBXGroup;
+			children = (
+				D78DDAA816BBA21A0079CE7C /* chatgame */,
+				D78DDAA116BBA21A0079CE7C /* Frameworks */,
+				D78DDA9F16BBA21A0079CE7C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D78DDA9F16BBA21A0079CE7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D78DDA9E16BBA21A0079CE7C /* chatgame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D78DDAA116BBA21A0079CE7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D78DDAA216BBA21A0079CE7C /* UIKit.framework */,
+				D78DDAA416BBA21A0079CE7C /* Foundation.framework */,
+				D78DDAA616BBA21A0079CE7C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D78DDAA816BBA21A0079CE7C /* chatgame */ = {
+			isa = PBXGroup;
+			children = (
+				D78DDAB116BBA21A0079CE7C /* AppDelegate.h */,
+				D78DDAB216BBA21A0079CE7C /* AppDelegate.m */,
+				D78DDABA16BBA21A0079CE7C /* FirstViewController.h */,
+				D78DDABB16BBA21A0079CE7C /* FirstViewController.m */,
+				D78DDABD16BBA21A0079CE7C /* first.png */,
+				D78DDABF16BBA21A0079CE7C /* first@2x.png */,
+				D78DDAC116BBA21A0079CE7C /* SecondViewController.h */,
+				D78DDAC216BBA21A0079CE7C /* SecondViewController.m */,
+				D78DDAC416BBA21A0079CE7C /* second.png */,
+				D78DDAC616BBA21A0079CE7C /* second@2x.png */,
+				D78DDAC816BBA21A0079CE7C /* FirstViewController_iPhone.xib */,
+				D78DDACB16BBA21A0079CE7C /* FirstViewController_iPad.xib */,
+				D78DDACE16BBA21A0079CE7C /* SecondViewController_iPhone.xib */,
+				D78DDAD116BBA21A0079CE7C /* SecondViewController_iPad.xib */,
+				D78DDAA916BBA21A0079CE7C /* Supporting Files */,
+			);
+			path = chatgame;
+			sourceTree = "<group>";
+		};
+		D78DDAA916BBA21A0079CE7C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D78DDAAA16BBA21A0079CE7C /* chatgame-Info.plist */,
+				D78DDAAB16BBA21A0079CE7C /* InfoPlist.strings */,
+				D78DDAAE16BBA21A0079CE7C /* main.m */,
+				D78DDAB016BBA21A0079CE7C /* chatgame-Prefix.pch */,
+				D78DDAB416BBA21A0079CE7C /* Default.png */,
+				D78DDAB616BBA21A0079CE7C /* Default@2x.png */,
+				D78DDAB816BBA21A0079CE7C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D78DDA9D16BBA21A0079CE7C /* chatgame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D78DDAD616BBA21A0079CE7C /* Build configuration list for PBXNativeTarget "chatgame" */;
+			buildPhases = (
+				D78DDA9A16BBA21A0079CE7C /* Sources */,
+				D78DDA9B16BBA21A0079CE7C /* Frameworks */,
+				D78DDA9C16BBA21A0079CE7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = chatgame;
+			productName = chatgame;
+			productReference = D78DDA9E16BBA21A0079CE7C /* chatgame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D78DDA9516BBA21A0079CE7C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Cardinal Blue";
+			};
+			buildConfigurationList = D78DDA9816BBA21A0079CE7C /* Build configuration list for PBXProject "chatgame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D78DDA9316BBA21A0079CE7C;
+			productRefGroup = D78DDA9F16BBA21A0079CE7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D78DDA9D16BBA21A0079CE7C /* chatgame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D78DDA9C16BBA21A0079CE7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D78DDAAD16BBA21A0079CE7C /* InfoPlist.strings in Resources */,
+				D78DDAB516BBA21A0079CE7C /* Default.png in Resources */,
+				D78DDAB716BBA21A0079CE7C /* Default@2x.png in Resources */,
+				D78DDAB916BBA21A0079CE7C /* Default-568h@2x.png in Resources */,
+				D78DDABE16BBA21A0079CE7C /* first.png in Resources */,
+				D78DDAC016BBA21A0079CE7C /* first@2x.png in Resources */,
+				D78DDAC516BBA21A0079CE7C /* second.png in Resources */,
+				D78DDAC716BBA21A0079CE7C /* second@2x.png in Resources */,
+				D78DDACA16BBA21A0079CE7C /* FirstViewController_iPhone.xib in Resources */,
+				D78DDACD16BBA21A0079CE7C /* FirstViewController_iPad.xib in Resources */,
+				D78DDAD016BBA21A0079CE7C /* SecondViewController_iPhone.xib in Resources */,
+				D78DDAD316BBA21A0079CE7C /* SecondViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D78DDA9A16BBA21A0079CE7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D78DDAAF16BBA21A0079CE7C /* main.m in Sources */,
+				D78DDAB316BBA21A0079CE7C /* AppDelegate.m in Sources */,
+				D78DDABC16BBA21A0079CE7C /* FirstViewController.m in Sources */,
+				D78DDAC316BBA21A0079CE7C /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D78DDAAB16BBA21A0079CE7C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D78DDAAC16BBA21A0079CE7C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D78DDAC816BBA21A0079CE7C /* FirstViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D78DDAC916BBA21A0079CE7C /* en */,
+			);
+			name = FirstViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		D78DDACB16BBA21A0079CE7C /* FirstViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D78DDACC16BBA21A0079CE7C /* en */,
+			);
+			name = FirstViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		D78DDACE16BBA21A0079CE7C /* SecondViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D78DDACF16BBA21A0079CE7C /* en */,
+			);
+			name = SecondViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		D78DDAD116BBA21A0079CE7C /* SecondViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D78DDAD216BBA21A0079CE7C /* en */,
+			);
+			name = SecondViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D78DDAD416BBA21A0079CE7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D78DDAD516BBA21A0079CE7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D78DDAD716BBA21A0079CE7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "chatgame/chatgame-Prefix.pch";
+				INFOPLIST_FILE = "chatgame/chatgame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D78DDAD816BBA21A0079CE7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "chatgame/chatgame-Prefix.pch";
+				INFOPLIST_FILE = "chatgame/chatgame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D78DDA9816BBA21A0079CE7C /* Build configuration list for PBXProject "chatgame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D78DDAD416BBA21A0079CE7C /* Debug */,
+				D78DDAD516BBA21A0079CE7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D78DDAD616BBA21A0079CE7C /* Build configuration list for PBXNativeTarget "chatgame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D78DDAD716BBA21A0079CE7C /* Debug */,
+				D78DDAD816BBA21A0079CE7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D78DDA9516BBA21A0079CE7C /* Project object */;
+}
