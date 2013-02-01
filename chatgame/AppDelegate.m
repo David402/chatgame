@@ -8,9 +8,9 @@
 
 #import "AppDelegate.h"
 
-#import "FirstViewController.h"
-
-#import "SecondViewController.h"
+#import "ArenaViewController.h"
+#import "ChatListViewController.h"
+#import "AccountViewController.h"
 
 @implementation AppDelegate
 
@@ -25,16 +25,20 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    UIViewController *viewController1, *viewController2;
+    UIViewController *arenaViewController, *chatListViewController, *accountViewController;
+    UINavigationController *arenaNavController = [[[UINavigationController alloc] init] autorelease];
+    UINavigationController *chatListNavController = [[[UINavigationController alloc] init] autorelease];
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil] autorelease];
-        viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPhone" bundle:nil] autorelease];
-    } else {
-        viewController1 = [[[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil] autorelease];
-        viewController2 = [[[SecondViewController alloc] initWithNibName:@"SecondViewController_iPad" bundle:nil] autorelease];
+        arenaViewController = [[[ArenaViewController alloc] initWithNibName:@"ArenaViewController" bundle:nil] autorelease];
+        [arenaNavController pushViewController:arenaViewController animated:NO];
+        
+        chatListViewController = [[[ChatListViewController alloc] initWithNibName:@"ChatListViewController" bundle:nil] autorelease];
+        [chatListNavController pushViewController:chatListViewController animated:NO];
+        
+        accountViewController = [[[AccountViewController alloc] initWithNibName:@"AccountViewController" bundle:nil] autorelease];
     }
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = @[viewController1, viewController2];
+    self.tabBarController.viewControllers = @[arenaNavController, chatListNavController, accountViewController];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

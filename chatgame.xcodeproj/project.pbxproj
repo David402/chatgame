@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7485C4716BBBE9700F45277 /* MessageEntryBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D7485C3F16BBBE9700F45277 /* MessageEntryBackground.png */; };
+		D7485C4816BBBE9700F45277 /* MessageEntryBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7485C4016BBBE9700F45277 /* MessageEntryBackground@2x.png */; };
+		D7485C4916BBBE9700F45277 /* MessageEntryInputField.png in Resources */ = {isa = PBXBuildFile; fileRef = D7485C4116BBBE9700F45277 /* MessageEntryInputField.png */; };
+		D7485C4A16BBBE9700F45277 /* MessageEntryInputField@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7485C4216BBBE9700F45277 /* MessageEntryInputField@2x.png */; };
+		D7485C4B16BBBE9700F45277 /* MessageEntrySendButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D7485C4316BBBE9700F45277 /* MessageEntrySendButton.png */; };
+		D7485C4C16BBBE9700F45277 /* MessageEntrySendButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7485C4416BBBE9700F45277 /* MessageEntrySendButton@2x.png */; };
+		D7485C4D16BBBE9700F45277 /* MessageEntrySendButtonPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D7485C4516BBBE9700F45277 /* MessageEntrySendButtonPressed.png */; };
+		D7485C4E16BBBE9700F45277 /* MessageEntrySendButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D7485C4616BBBE9700F45277 /* MessageEntrySendButtonPressed@2x.png */; };
 		D78DDAA316BBA21A0079CE7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DDAA216BBA21A0079CE7C /* UIKit.framework */; };
 		D78DDAA516BBA21A0079CE7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DDAA416BBA21A0079CE7C /* Foundation.framework */; };
 		D78DDAA716BBA21A0079CE7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DDAA616BBA21A0079CE7C /* CoreGraphics.framework */; };
@@ -16,19 +24,32 @@
 		D78DDAB516BBA21A0079CE7C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAB416BBA21A0079CE7C /* Default.png */; };
 		D78DDAB716BBA21A0079CE7C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAB616BBA21A0079CE7C /* Default@2x.png */; };
 		D78DDAB916BBA21A0079CE7C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAB816BBA21A0079CE7C /* Default-568h@2x.png */; };
-		D78DDABC16BBA21A0079CE7C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDABB16BBA21A0079CE7C /* FirstViewController.m */; };
+		D78DDABC16BBA21A0079CE7C /* ArenaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDABB16BBA21A0079CE7C /* ArenaViewController.m */; };
 		D78DDABE16BBA21A0079CE7C /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDABD16BBA21A0079CE7C /* first.png */; };
 		D78DDAC016BBA21A0079CE7C /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDABF16BBA21A0079CE7C /* first@2x.png */; };
-		D78DDAC316BBA21A0079CE7C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDAC216BBA21A0079CE7C /* SecondViewController.m */; };
+		D78DDAC316BBA21A0079CE7C /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDAC216BBA21A0079CE7C /* ChatListViewController.m */; };
 		D78DDAC516BBA21A0079CE7C /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAC416BBA21A0079CE7C /* second.png */; };
 		D78DDAC716BBA21A0079CE7C /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAC616BBA21A0079CE7C /* second@2x.png */; };
-		D78DDACA16BBA21A0079CE7C /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAC816BBA21A0079CE7C /* FirstViewController_iPhone.xib */; };
-		D78DDACD16BBA21A0079CE7C /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78DDACB16BBA21A0079CE7C /* FirstViewController_iPad.xib */; };
-		D78DDAD016BBA21A0079CE7C /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78DDACE16BBA21A0079CE7C /* SecondViewController_iPhone.xib */; };
-		D78DDAD316BBA21A0079CE7C /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAD116BBA21A0079CE7C /* SecondViewController_iPad.xib */; };
+		D78DDACA16BBA21A0079CE7C /* ArenaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAC816BBA21A0079CE7C /* ArenaViewController.xib */; };
+		D78DDAD016BBA21A0079CE7C /* ChatListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78DDACE16BBA21A0079CE7C /* ChatListViewController.xib */; };
+		D78DDADF16BBA27C0079CE7C /* HPGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDADC16BBA27C0079CE7C /* HPGrowingTextView.m */; };
+		D78DDAE016BBA27C0079CE7C /* HPTextViewInternal.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDADE16BBA27C0079CE7C /* HPTextViewInternal.m */; };
+		D78DDAEE16BBA4970079CE7C /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDAEC16BBA4960079CE7C /* AccountViewController.m */; };
+		D78DDAEF16BBA4970079CE7C /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78DDAED16BBA4960079CE7C /* AccountViewController.xib */; };
+		D78DDAF216BBA7E80079CE7C /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDAF116BBA7E80079CE7C /* ChatViewController.m */; };
+		D78DDAFA16BBAF310079CE7C /* ChatUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDAF916BBAF310079CE7C /* ChatUser.m */; };
+		D78DDB0116BBB3190079CE7C /* StickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDB0016BBB3190079CE7C /* StickerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D7485C3F16BBBE9700F45277 /* MessageEntryBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageEntryBackground.png; sourceTree = "<group>"; };
+		D7485C4016BBBE9700F45277 /* MessageEntryBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageEntryBackground@2x.png"; sourceTree = "<group>"; };
+		D7485C4116BBBE9700F45277 /* MessageEntryInputField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageEntryInputField.png; sourceTree = "<group>"; };
+		D7485C4216BBBE9700F45277 /* MessageEntryInputField@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageEntryInputField@2x.png"; sourceTree = "<group>"; };
+		D7485C4316BBBE9700F45277 /* MessageEntrySendButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageEntrySendButton.png; sourceTree = "<group>"; };
+		D7485C4416BBBE9700F45277 /* MessageEntrySendButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageEntrySendButton@2x.png"; sourceTree = "<group>"; };
+		D7485C4516BBBE9700F45277 /* MessageEntrySendButtonPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MessageEntrySendButtonPressed.png; sourceTree = "<group>"; };
+		D7485C4616BBBE9700F45277 /* MessageEntrySendButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageEntrySendButtonPressed@2x.png"; sourceTree = "<group>"; };
 		D78DDA9E16BBA21A0079CE7C /* chatgame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatgame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78DDAA216BBA21A0079CE7C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D78DDAA416BBA21A0079CE7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -42,18 +63,31 @@
 		D78DDAB416BBA21A0079CE7C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D78DDAB616BBA21A0079CE7C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D78DDAB816BBA21A0079CE7C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		D78DDABA16BBA21A0079CE7C /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		D78DDABB16BBA21A0079CE7C /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		D78DDABA16BBA21A0079CE7C /* ArenaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArenaViewController.h; sourceTree = "<group>"; };
+		D78DDABB16BBA21A0079CE7C /* ArenaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArenaViewController.m; sourceTree = "<group>"; };
 		D78DDABD16BBA21A0079CE7C /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		D78DDABF16BBA21A0079CE7C /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		D78DDAC116BBA21A0079CE7C /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		D78DDAC216BBA21A0079CE7C /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D78DDAC116BBA21A0079CE7C /* ChatListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
+		D78DDAC216BBA21A0079CE7C /* ChatListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatListViewController.m; sourceTree = "<group>"; };
 		D78DDAC416BBA21A0079CE7C /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		D78DDAC616BBA21A0079CE7C /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
-		D78DDAC916BBA21A0079CE7C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
-		D78DDACC16BBA21A0079CE7C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
-		D78DDACF16BBA21A0079CE7C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
-		D78DDAD216BBA21A0079CE7C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
+		D78DDAC916BBA21A0079CE7C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ArenaViewController.xib; sourceTree = "<group>"; };
+		D78DDACF16BBA21A0079CE7C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ChatListViewController.xib; sourceTree = "<group>"; };
+		D78DDADB16BBA27C0079CE7C /* HPGrowingTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPGrowingTextView.h; sourceTree = "<group>"; };
+		D78DDADC16BBA27C0079CE7C /* HPGrowingTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPGrowingTextView.m; sourceTree = "<group>"; };
+		D78DDADD16BBA27C0079CE7C /* HPTextViewInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPTextViewInternal.h; sourceTree = "<group>"; };
+		D78DDADE16BBA27C0079CE7C /* HPTextViewInternal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPTextViewInternal.m; sourceTree = "<group>"; };
+		D78DDAEB16BBA4960079CE7C /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		D78DDAEC16BBA4960079CE7C /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		D78DDAED16BBA4960079CE7C /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		D78DDAF016BBA7E80079CE7C /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		D78DDAF116BBA7E80079CE7C /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		D78DDAF716BBAB830079CE7C /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		D78DDAF816BBAF300079CE7C /* ChatUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatUser.h; sourceTree = "<group>"; };
+		D78DDAF916BBAF310079CE7C /* ChatUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUser.m; sourceTree = "<group>"; };
+		D78DDAFF16BBB3190079CE7C /* StickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickerCell.h; sourceTree = "<group>"; };
+		D78DDB0016BBB3190079CE7C /* StickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickerCell.m; sourceTree = "<group>"; };
+		D78DDB0316BBB3C10079CE7C /* Configuration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +104,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D7485C3E16BBBE7E00F45277 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D7485C3F16BBBE9700F45277 /* MessageEntryBackground.png */,
+				D7485C4016BBBE9700F45277 /* MessageEntryBackground@2x.png */,
+				D7485C4116BBBE9700F45277 /* MessageEntryInputField.png */,
+				D7485C4216BBBE9700F45277 /* MessageEntryInputField@2x.png */,
+				D7485C4316BBBE9700F45277 /* MessageEntrySendButton.png */,
+				D7485C4416BBBE9700F45277 /* MessageEntrySendButton@2x.png */,
+				D7485C4516BBBE9700F45277 /* MessageEntrySendButtonPressed.png */,
+				D7485C4616BBBE9700F45277 /* MessageEntrySendButtonPressed@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		D78DDA9316BBA21A0079CE7C = {
 			isa = PBXGroup;
 			children = (
@@ -100,20 +149,31 @@
 		D78DDAA816BBA21A0079CE7C /* chatgame */ = {
 			isa = PBXGroup;
 			children = (
+				D7485C3E16BBBE7E00F45277 /* Resources */,
+				D78DDAF716BBAB830079CE7C /* Utils.h */,
+				D78DDB0316BBB3C10079CE7C /* Configuration.h */,
+				D78DDAF816BBAF300079CE7C /* ChatUser.h */,
+				D78DDAF916BBAF310079CE7C /* ChatUser.m */,
+				D78DDADA16BBA2530079CE7C /* GrowingTextView */,
 				D78DDAB116BBA21A0079CE7C /* AppDelegate.h */,
 				D78DDAB216BBA21A0079CE7C /* AppDelegate.m */,
-				D78DDABA16BBA21A0079CE7C /* FirstViewController.h */,
-				D78DDABB16BBA21A0079CE7C /* FirstViewController.m */,
+				D78DDABA16BBA21A0079CE7C /* ArenaViewController.h */,
+				D78DDABB16BBA21A0079CE7C /* ArenaViewController.m */,
 				D78DDABD16BBA21A0079CE7C /* first.png */,
 				D78DDABF16BBA21A0079CE7C /* first@2x.png */,
-				D78DDAC116BBA21A0079CE7C /* SecondViewController.h */,
-				D78DDAC216BBA21A0079CE7C /* SecondViewController.m */,
+				D78DDAC116BBA21A0079CE7C /* ChatListViewController.h */,
+				D78DDAC216BBA21A0079CE7C /* ChatListViewController.m */,
 				D78DDAC416BBA21A0079CE7C /* second.png */,
 				D78DDAC616BBA21A0079CE7C /* second@2x.png */,
-				D78DDAC816BBA21A0079CE7C /* FirstViewController_iPhone.xib */,
-				D78DDACB16BBA21A0079CE7C /* FirstViewController_iPad.xib */,
-				D78DDACE16BBA21A0079CE7C /* SecondViewController_iPhone.xib */,
-				D78DDAD116BBA21A0079CE7C /* SecondViewController_iPad.xib */,
+				D78DDAEB16BBA4960079CE7C /* AccountViewController.h */,
+				D78DDAEC16BBA4960079CE7C /* AccountViewController.m */,
+				D78DDAF016BBA7E80079CE7C /* ChatViewController.h */,
+				D78DDAF116BBA7E80079CE7C /* ChatViewController.m */,
+				D78DDAC816BBA21A0079CE7C /* ArenaViewController.xib */,
+				D78DDACE16BBA21A0079CE7C /* ChatListViewController.xib */,
+				D78DDAED16BBA4960079CE7C /* AccountViewController.xib */,
+				D78DDAFF16BBB3190079CE7C /* StickerCell.h */,
+				D78DDB0016BBB3190079CE7C /* StickerCell.m */,
 				D78DDAA916BBA21A0079CE7C /* Supporting Files */,
 			);
 			path = chatgame;
@@ -131,6 +191,17 @@
 				D78DDAB816BBA21A0079CE7C /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D78DDADA16BBA2530079CE7C /* GrowingTextView */ = {
+			isa = PBXGroup;
+			children = (
+				D78DDADB16BBA27C0079CE7C /* HPGrowingTextView.h */,
+				D78DDADC16BBA27C0079CE7C /* HPGrowingTextView.m */,
+				D78DDADD16BBA27C0079CE7C /* HPTextViewInternal.h */,
+				D78DDADE16BBA27C0079CE7C /* HPTextViewInternal.m */,
+			);
+			name = GrowingTextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,10 +263,17 @@
 				D78DDAC016BBA21A0079CE7C /* first@2x.png in Resources */,
 				D78DDAC516BBA21A0079CE7C /* second.png in Resources */,
 				D78DDAC716BBA21A0079CE7C /* second@2x.png in Resources */,
-				D78DDACA16BBA21A0079CE7C /* FirstViewController_iPhone.xib in Resources */,
-				D78DDACD16BBA21A0079CE7C /* FirstViewController_iPad.xib in Resources */,
-				D78DDAD016BBA21A0079CE7C /* SecondViewController_iPhone.xib in Resources */,
-				D78DDAD316BBA21A0079CE7C /* SecondViewController_iPad.xib in Resources */,
+				D78DDACA16BBA21A0079CE7C /* ArenaViewController.xib in Resources */,
+				D78DDAD016BBA21A0079CE7C /* ChatListViewController.xib in Resources */,
+				D78DDAEF16BBA4970079CE7C /* AccountViewController.xib in Resources */,
+				D7485C4716BBBE9700F45277 /* MessageEntryBackground.png in Resources */,
+				D7485C4816BBBE9700F45277 /* MessageEntryBackground@2x.png in Resources */,
+				D7485C4916BBBE9700F45277 /* MessageEntryInputField.png in Resources */,
+				D7485C4A16BBBE9700F45277 /* MessageEntryInputField@2x.png in Resources */,
+				D7485C4B16BBBE9700F45277 /* MessageEntrySendButton.png in Resources */,
+				D7485C4C16BBBE9700F45277 /* MessageEntrySendButton@2x.png in Resources */,
+				D7485C4D16BBBE9700F45277 /* MessageEntrySendButtonPressed.png in Resources */,
+				D7485C4E16BBBE9700F45277 /* MessageEntrySendButtonPressed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +286,14 @@
 			files = (
 				D78DDAAF16BBA21A0079CE7C /* main.m in Sources */,
 				D78DDAB316BBA21A0079CE7C /* AppDelegate.m in Sources */,
-				D78DDABC16BBA21A0079CE7C /* FirstViewController.m in Sources */,
-				D78DDAC316BBA21A0079CE7C /* SecondViewController.m in Sources */,
+				D78DDABC16BBA21A0079CE7C /* ArenaViewController.m in Sources */,
+				D78DDAC316BBA21A0079CE7C /* ChatListViewController.m in Sources */,
+				D78DDADF16BBA27C0079CE7C /* HPGrowingTextView.m in Sources */,
+				D78DDAE016BBA27C0079CE7C /* HPTextViewInternal.m in Sources */,
+				D78DDAEE16BBA4970079CE7C /* AccountViewController.m in Sources */,
+				D78DDAF216BBA7E80079CE7C /* ChatViewController.m in Sources */,
+				D78DDAFA16BBAF310079CE7C /* ChatUser.m in Sources */,
+				D78DDB0116BBB3190079CE7C /* StickerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,36 +308,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		D78DDAC816BBA21A0079CE7C /* FirstViewController_iPhone.xib */ = {
+		D78DDAC816BBA21A0079CE7C /* ArenaViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D78DDAC916BBA21A0079CE7C /* en */,
 			);
-			name = FirstViewController_iPhone.xib;
+			name = ArenaViewController.xib;
 			sourceTree = "<group>";
 		};
-		D78DDACB16BBA21A0079CE7C /* FirstViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D78DDACC16BBA21A0079CE7C /* en */,
-			);
-			name = FirstViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-		D78DDACE16BBA21A0079CE7C /* SecondViewController_iPhone.xib */ = {
+		D78DDACE16BBA21A0079CE7C /* ChatListViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D78DDACF16BBA21A0079CE7C /* en */,
 			);
-			name = SecondViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		D78DDAD116BBA21A0079CE7C /* SecondViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D78DDAD216BBA21A0079CE7C /* en */,
-			);
-			name = SecondViewController_iPad.xib;
+			name = ChatListViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -350,6 +418,7 @@
 				D78DDAD816BBA21A0079CE7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

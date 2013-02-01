@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  StickerCell.h
 //  chatgame
 //
 //  Created by David Liu on 2/1/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface StickerCell : UITableViewCell
+@property (retain, nonatomic) UIImageView *thumbnail;
 @end

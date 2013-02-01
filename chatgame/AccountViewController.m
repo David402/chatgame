@@ -1,33 +1,33 @@
 //
-//  SecondViewController.m
+//  AccountViewController.m
 //  chatgame
 //
 //  Created by David Liu on 2/1/13.
 //  Copyright (c) 2013 Cardinal Blue. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "AccountViewController.h"
 
-@interface SecondViewController ()
+@interface AccountViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation AccountViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Second", @"Second");
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
+        self.title = NSLocalizedString(@"Account", @"Account");
+        self.tabBarItem.image = [UIImage imageNamed:@"first"];
     }
     return self;
 }
-							
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
