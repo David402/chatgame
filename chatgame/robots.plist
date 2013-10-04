@@ -39,6 +39,7 @@
 		<string>John</string>
 		<key>phrases</key>
 		<array>
+			<string>Holly Cow</string>
 			<string>Can someone please feed Obama?</string>
 			<string>Obama? Obama? Obamaa?</string>
 			<string>Has anyone seen Obama?</string>
@@ -46,7 +47,6 @@
 			<string>mm...</string>
 			<string>Scrum please</string>
 			<string>*whisper* do you want to talk about...</string>
-			<string>REALLY?</string>
 		</array>
 	</dict>
 	<dict>
@@ -57,6 +57,7 @@
 			<string>Sorry, I need to go.</string>
 			<string>Sorry, I need to run.</string>
 			<string>one way to do this would be...</string>
+			<string>歪歪? 歪歪?</string>
 		</array>
 	</dict>
 	<dict>
@@ -65,7 +66,6 @@
 		<key>phrases</key>
 		<array>
 			<string>好餓喔</string>
-			<string>我要增肥</string>
 			<string>er</string>
 			<string>What?!</string>
 			<string>我要吐</string>
@@ -78,7 +78,6 @@
 		<key>phrases</key>
 		<array>
 			<string>Love &amp; Peace</string>
-			<string>我要增肥</string>
 			<string>嗚嗚嗚</string>
 			<string>哈哈哈哈哈哈哈</string>
 			<string>Lunch?</string>
