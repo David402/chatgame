@@ -48,15 +48,21 @@
         self.user = user;
         self.robot = robot;
         
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//												 selector:@selector(keyboardWillShow:)
+//													 name:UIKeyboardWillShowNotification
+//												   object:nil];
+//		
+//		[[NSNotificationCenter defaultCenter] addObserver:self
+//												 selector:@selector(keyboardWillHide:)
+//													 name:UIKeyboardWillHideNotification
+//												   object:nil];
+//        
         [[NSNotificationCenter defaultCenter] addObserver:self
-												 selector:@selector(keyboardWillShow:)
-													 name:UIKeyboardWillShowNotification
-												   object:nil];
-		
-		[[NSNotificationCenter defaultCenter] addObserver:self
-												 selector:@selector(keyboardWillHide:)
-													 name:UIKeyboardWillHideNotification
-												   object:nil];
+                                                 selector:@selector(keyboardDidChangeFrame:)
+                                                     name:UIKeyboardDidChangeFrameNotification
+                                                   object:nil];
+        
         self.refreshTimer =
         [[NSTimer scheduledTimerWithTimeInterval:1
                                           target:self
@@ -76,7 +82,7 @@
     // layout UI elements
     self.view.backgroundColor = [UIColor colorWithRed:219.0f/255.0f green:226.0f/255.0f blue:237.0f/255.0f alpha:1];
 	
-    self.containerView = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 40, WINSIZE.width, 40)];
+    self.containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WINSIZE.width, 40)];
     
 	self.textView = [[HPGrowingTextView alloc] initWithFrame:CGRectMake(6, 3, 240, 40)];
     self.textView.contentInset = UIEdgeInsetsMake(0, 5, 0, 5);
@@ -91,8 +97,6 @@
     
     // textView.text = @"test\n\ntest";
 	// textView.animateHeightChange = NO; //turns off animation
-    
-    [self.view addSubview:self.containerView];
     
     UIImage *rawEntryBackground = [UIImage imageNamed:@"MessageEntryInputField.png"];
     UIImage *entryBackground = [rawEntryBackground stretchableImageWithLeftCapWidth:13 topCapHeight:22];
@@ -130,7 +134,6 @@
     [doneBtn setBackgroundImage:sendBtnBackground forState:UIControlStateNormal];
     [doneBtn setBackgroundImage:selectedSendBtnBackground forState:UIControlStateSelected];
 	[self.containerView addSubview:doneBtn];
-    self.containerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     
     
     
@@ -158,6 +161,19 @@
     
 //    [self.view addSubview:self.stickerTable];
     [self.view addSubview:self.chatView];
+    [self.view addSubview:self.containerView];
+}
+
+
+- (void)keyboardDidChangeFrame:(NSNotification *)notification
+{
+    CGRect kbFrame;
+    [[[notification userInfo] valueForKey:UIKeyboardFrameEndUserInfoKey] getValue:&kbFrame];
+    
+    CGRect frame = self.containerView.frame;
+    frame.origin.y = self.view.frame.size.height - kbFrame.size.height - frame.size.height;
+    self.containerView.frame = frame;
+    [self.view addSubview:self.containerView];
 }
 
 -(void)viewWillAppear:(BOOL)animated
