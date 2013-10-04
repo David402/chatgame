@@ -10,6 +10,9 @@
 			<string>OMG</string>
 			<string>Oh! shit</string>
 			<string>John!!</string>
+			<string>REALLY?</string>
+			<string>No.fu*king.way!</string>
+			<string>God bless everyone</string>
 		</array>
 	</dict>
 	<dict>
@@ -17,7 +20,31 @@
 		<string>Jaime</string>
 		<key>phrases</key>
 		<array>
-			<string>I need to go</string>
+			<string>Sorry, I need to go.</string>
+			<string>Sorry, I need to run.</string>
+			<string>one way to do this would be...</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Angela</string>
+		<key>phrases</key>
+		<array>
+			<string>好餓喔</string>
+			<string>我要增肥</string>
+			<string>er</string>
+			<string>What?!</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Mica</string>
+		<key>phrases</key>
+		<array>
+			<string>Love &amp; Peace</string>
+			<string>我要增肥</string>
+			<string>嗚嗚嗚</string>
+			<string>哈哈哈哈哈哈哈</string>
 		</array>
 	</dict>
 </array>
