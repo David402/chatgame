@@ -10,6 +10,7 @@
 
 @class HPGrowingTextView;
 @class ChatUser;
+@class CBUserRobot;
 @interface ChatViewController : UIViewController
 
 @property (nonatomic, retain) UITextView *chatView;
@@ -17,6 +18,6 @@
 @property (nonatomic, retain) HPGrowingTextView *textView;
 @property (nonatomic, retain) UITableView *stickerTable;
 
-- (id)initWithUser:(ChatUser *)user andFriend:(ChatUser *)user;
+- (id)initWithUser:(ChatUser *)user andFriend:(CBUserRobot *)robot;
 
 @end

@@ -12,6 +12,7 @@
 #import "ChatViewController.h"
 #import "HPGrowingTextView.h"
 #import "ChatUser.h"
+#import "CBUser.h"
 #import "StickerCell.h"
 #import "ASIFormDataRequest.h"
 
@@ -26,16 +27,16 @@
 >
 
 @property (nonatomic, retain) ChatUser *user;
-@property (nonatomic, retain) ChatUser *friend;
+@property (nonatomic, retain) CBUserRobot *robot;
 @property (nonatomic, retain) NSTimer *refreshTimer;
 
 @end
 
 @implementation ChatViewController
 @synthesize user = _user;
-@synthesize friend = _friend;
+@synthesize robot = _robot;
 
-- (id)initWithUser:(ChatUser *)user andFriend:(ChatUser *)friend
+- (id)initWithUser:(ChatUser *)user andFriend:(CBUserRobot *)robot
 {
     self = [self init];
     if (self) {
@@ -45,7 +46,7 @@
                                                           style:UITableViewStylePlain]
                              autorelease];
         self.user = user;
-        self.friend = friend;
+        self.robot = robot;
         
         [[NSNotificationCenter defaultCenter] addObserver:self
 												 selector:@selector(keyboardWillShow:)
@@ -146,6 +147,14 @@
     self.chatView.backgroundColor = [UIColor colorWithRed:219.0f/255.0f green:226.0f/255.0f blue:237.0f/255.0f alpha:1];
     self.chatView.editable = NO;
     self.chatView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+
+#if 0
+    self.chatView = [[HPGrowingTextView alloc] initWithFrame:CGRectMake(0, 0, WINSIZE.width, WINSIZE.height - KB_HEIGHT - self.textView.bounds.size.height - 44)];
+    self.chatView.delegate = self;
+    self.chatView.backgroundColor = [UIColor colorWithRed:219.0f/255.0f green:226.0f/255.0f blue:237.0f/255.0f alpha:1];
+    self.chatView.editable = NO;
+    self.chatView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+#endif
     
 //    [self.view addSubview:self.stickerTable];
     [self.view addSubview:self.chatView];
@@ -175,7 +184,7 @@
     self.textView = nil;
     self.stickerTable = nil;
     self.user = nil;
-    self.friend = nil;
+    self.robot = nil;
     [super dealloc];
 }
 
@@ -249,10 +258,32 @@
 - (void)sendText
 {
     NSString *text = self.textView.text;
-    NSString *newText = [self.chatView.text stringByAppendingFormat:@"%@: %@\n",self.user.username, text];
+    NSString *name = (self.user.username == nil || [self.user.username isEqualToString:@""]) ? @"guest" : self.user.username;
+    NSString *newText = [self.chatView.text stringByAppendingFormat:@"%@: %@\n", name, text];
     self.chatView.text = newText;
 //    self.chatView.attributedText = @"";
     self.textView.text = @"";
+    
+    // Scroll to bottom
+    [self.chatView scrollRangeToVisible:NSMakeRange([self.chatView.text length], 0)];
+    
+    // Robot answer
+    NSString *robotAnswer = [self.robot randomPhrase];
+    [self performSelector:@selector(sendWithText:) withObject:robotAnswer afterDelay:0.5];
+}
+
+- (void)sendWithText:(NSString *)text
+{
+    if (!text) {
+        return;
+    }
+    
+    NSString *newText = [self.chatView.text stringByAppendingFormat:@"%@: %@\n", self.robot.name, text];
+    self.chatView.text = newText;
+    self.textView.text = @"";
+    
+    // Scroll to bottom
+    [self.chatView scrollRangeToVisible:NSMakeRange([self.chatView.text length], 0)];
 }
 
 -(void)resignTextView
