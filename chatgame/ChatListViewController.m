@@ -100,9 +100,9 @@
     ChatUser *me = [[AccountViewController shared] user];
     ChatViewController *chatViewController;
     if (indexPath.row == 0) {
-        chatViewController = [[ChatViewController alloc] initWithUser:me andFriends:self.robots];
+        chatViewController = [[ChatViewController alloc] initWithUser:me andFriends:self.robots history:nil];
     } else {
-        chatViewController = [[ChatViewController alloc] initWithUser:me andFriend:[self.robots objectAtIndex:indexPath.row - 1]];
+        chatViewController = [[ChatViewController alloc] initWithUser:me andFriend:[self.robots objectAtIndex:indexPath.row - 1] history:nil];
         
     }
     

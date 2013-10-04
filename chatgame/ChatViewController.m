@@ -39,35 +39,23 @@
 @synthesize user = _user;
 @synthesize robot = _robot;
 
-- (id)initWithUser:(ChatUser *)user andFriend:(CBUserRobot *)robot history:(NSString *)history
+- (id)initWithUser:(ChatUser *)user andFriends:(NSArray *)robots history:(NSString *)history
 {
     self = [self init];
     if (self) {
-        self.navigationItem.rightBarButtonItem =
-        [[[UIBarButtonItem alloc] initWithTitle:@"Explore"
-                                          style:UIBarButtonItemStyleDone
-                                         target:self
-                                         action:@selector(handleExploreButtonPressed:)]
-         autorelease];
         // Custom initialization
         self.textView = [[[HPGrowingTextView alloc] init] autorelease];
         self.stickerTable = [[[UITableView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)
                                                           style:UITableViewStylePlain]
                              autorelease];
         self.user = user;
-        self.robot = robot;
+        self.robots = robots;
         self.history = history;
         
-        //        [[NSNotificationCenter defaultCenter] addObserver:self
-        //												 selector:@selector(keyboardWillShow:)
-        //													 name:UIKeyboardWillShowNotification
-        //												   object:nil];
-        //
-        //		[[NSNotificationCenter defaultCenter] addObserver:self
-        //												 selector:@selector(keyboardWillHide:)
-        //													 name:UIKeyboardWillHideNotification
-        //												   object:nil];
-        //
+        self.navigationItem.rightBarButtonItem =
+        [[[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStyleDone target:self action:@selector(handleExploreButtonPressed:)] autorelease];
+        
+        
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(keyboardDidChangeFrame:)
                                                      name:UIKeyboardDidChangeFrameNotification
@@ -81,6 +69,12 @@
                                          repeats:YES] retain];
     }
     return self;
+}
+
+
+- (id)initWithUser:(ChatUser *)user andFriend:(CBUserRobot *)robot history:(NSString *)history
+{
+    return [self initWithUser:user andFriends:@[robot] history:history];
 }
 
 - (id)initWithUser:(ChatUser *)user andFriend:(CBUserRobot *)robot
@@ -92,33 +86,6 @@
 {
     ChatHistoryViewController *vc = [[[ChatHistoryViewController alloc] init] autorelease];
     [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (id)initWithUser:(ChatUser *)user andFriends:(NSArray *)robots
-{
-    self = [self init];
-    if (self) {
-        // Custom initialization
-        self.textView = [[[HPGrowingTextView alloc] init] autorelease];
-        self.stickerTable = [[[UITableView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)
-                                                          style:UITableViewStylePlain]
-                             autorelease];
-        self.user = user;
-        self.robots = robots;
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(keyboardDidChangeFrame:)
-                                                     name:UIKeyboardDidChangeFrameNotification
-                                                   object:nil];
-        
-        self.refreshTimer =
-        [[NSTimer scheduledTimerWithTimeInterval:1
-                                          target:self
-                                        selector:@selector(refresh)
-                                        userInfo:nil
-                                         repeats:YES] retain];
-    }
-    return self;
 }
 
 - (void)viewDidLoad

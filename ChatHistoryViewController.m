@@ -61,7 +61,7 @@
     switch (indexPath.row) {
         case 0:
             title = @"Mica, Mei & Angela";
-            subject = @"老闆最棒";
+            subject = @"老闆很樊";
             break;
         case 1:
             title = @"Mica & Mimi";
@@ -85,27 +85,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *title = nil;
-    NSString *subject = nil;
-    NSString *history = nil;
-    switch (indexPath.row) {
-        case 0:
-            title = @"Mica, Mei & Angela";
-            subject = @"老闆很樊";
-            history = @"Mica: 你知道John什麼時候的飛機嘛？\nAngela: 蛤？不知道！\nmei:OMG！It's so annoying, he never puts his schedule on our calendar... but he's always nagging everyone else to!\nMica: ok...calm down. i just asked him... he's going to US this Sunday.\nMei: Are you joking?! This Sunday? 2 days later?\nMica: Yea....-_- \nAngela:	How about Obama?\nMica: 對啊！他已經在問我Obama的事。。。 \nmei: ugh.... so annoying.  但....... 有時候他也蠻可愛的啦～\nAngela:	我要吐了\n";
-            break;
-        case 1:
-            title = @"Mica & Mimi";
-            subject = @"How's France";
-            break;
-        case 2:
-            title = @"Mica & Dix";
-            subject = @"ex1 or ex2";
-            break;
-            
-        default:
-            break;
-    }
+    NSString *history = @"Mica: 你知道John什麼時候的飛機嘛？\nAngela: 蛤？不知道！\nmei:OMG！It's so annoying, he never puts his schedule on our calendar... but he's always nagging everyone else to!\nMica: ok...calm down. i just asked him... he's going to US this Sunday.\nMei: Are you joking?! This Sunday? 2 days later?\nMica: Yea....-_- \nAngela:	How about Obama?\nMica: 對啊！他已經在問我Obama的事。。。 \nmei: ugh.... so annoying.  但....... 有時候他也蠻可愛的啦～\nAngela:	我要吐了\n";
     
     ChatUser *user = [[AccountViewController shared] user];
     AngelaRobot *angela = [[[AngelaRobot alloc] init] autorelease];
