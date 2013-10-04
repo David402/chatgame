@@ -47,5 +47,15 @@
 			<string>哈哈哈哈哈哈哈</string>
 		</array>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>Dix</string>
+		<key>phrases</key>
+		<array>
+			<string>我要吃麥當勞</string>
+			<string>齁 YY</string>
+			<string>Ya!</string>
+		</array>
+	</dict>
 </array>
 </plist>
