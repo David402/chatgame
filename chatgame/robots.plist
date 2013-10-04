@@ -13,6 +13,25 @@
 			<string>REALLY?</string>
 			<string>No.fu*king.way!</string>
 			<string>God bless everyone</string>
+			<string>ok, this is SO RIDICULOUS</string>
+			<string>OH.MY.GOD</string>
+			<string>Please order dinner before 18:30</string>
+			<string>Yo Yo Yo</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>John</string>
+		<key>phrases</key>
+		<array>
+			<string>Can someone please feed Obama?</string>
+			<string>Obama? Obama? Obamaa?</string>
+			<string>Has anyone seen Obama?</string>
+			<string>er</string>
+			<string>mm...</string>
+			<string>Scrum please</string>
+			<string>*whisper* do you want to talk about...</string>
+			<string>REALLY?</string>
 		</array>
 	</dict>
 	<dict>
@@ -34,6 +53,7 @@
 			<string>我要增肥</string>
 			<string>er</string>
 			<string>What?!</string>
+			<string>我要吐</string>
 		</array>
 	</dict>
 	<dict>
@@ -52,6 +72,8 @@
 		<string>Dix</string>
 		<key>phrases</key>
 		<array>
+			<string>呃。。。這可能有點難。。。</string>
+			<string>欸，對。</string>
 			<string>我要吃麥當勞</string>
 			<string>齁 YY</string>
 			<string>Ya!</string>
