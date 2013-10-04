@@ -16,6 +16,7 @@
 #import "StickerCell.h"
 #import "ASIFormDataRequest.h"
 #import "ChatHistoryViewController.h"
+#import "CBToolkit.h"
 
 #define KB_HEIGHT 216
 #define STICKER_TABLE_HEIGHT 60
@@ -51,6 +52,11 @@
         self.user = user;
         self.robots = robots;
         self.history = history;
+        
+        NSArray *names = [self.robots collect:^id(CBUser *u) {
+            return u.name;
+        }];
+        self.title = [names componentsJoinedByString:@","];
         
         self.navigationItem.rightBarButtonItem =
         [[[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStyleDone target:self action:@selector(handleExploreButtonPressed:)] autorelease];
@@ -151,7 +157,6 @@
 	[self.containerView addSubview:doneBtn];
     
     
-    
     ///////////////////////////////////////////////////////////////////////////
     // Sticker
     ///////////////////////////////////////////////////////////////////////////
@@ -164,8 +169,10 @@
     self.chatView.delegate = self;
     self.chatView.backgroundColor = [UIColor colorWithRed:219.0f/255.0f green:226.0f/255.0f blue:237.0f/255.0f alpha:1];
     self.chatView.editable = NO;
+    self.chatView.autocorrectionType = UITextAutocorrectionTypeNo;
     self.chatView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.chatView.text = self.history;
+    self.chatView.font = [UIFont systemFontOfSize:24];
 #if 0
     self.chatView = [[HPGrowingTextView alloc] initWithFrame:CGRectMake(0, 0, WINSIZE.width, WINSIZE.height - KB_HEIGHT - self.textView.bounds.size.height - 44)];
     self.chatView.delegate = self;
