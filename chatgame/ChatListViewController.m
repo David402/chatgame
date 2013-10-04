@@ -12,6 +12,7 @@
 #import "Configuration.h"
 #import "ChatUser.h"
 #import "ChatViewController.h"
+#import "AccountViewController.h"
 
 @interface ChatListViewController ()
     <UITableViewDataSource, UITableViewDelegate>
@@ -88,15 +89,17 @@
 #warning add selection action
     if (indexPath.row == 0)
     {
+        
         ChatUser *user1 = [[[ChatUser alloc] init] autorelease];
         user1.username = @"1";
         user1.stickers = [NSArray array];
+        
         
         ChatUser *user2 = [[[ChatUser alloc] init] autorelease];
         user1.username = @"2";
         user1.stickers = [NSArray array];
         
-        ChatViewController *chatViewController = [[ChatViewController alloc] initWithUser:user1 andFriend:user2];
+        ChatViewController *chatViewController = [[ChatViewController alloc] initWithUser:[[AccountViewController shared] user] andFriend:user2];
         
         // Clear selection
         [self.chatListTable deselectRowAtIndexPath:indexPath animated:YES];

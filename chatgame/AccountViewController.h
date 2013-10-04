@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class ChatUser;
 @interface AccountViewController : UIViewController
 
++ (AccountViewController *)shared;
+@property (nonatomic, retain, readonly) ChatUser *user;
 @end

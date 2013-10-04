@@ -13,6 +13,7 @@
 #import "HPGrowingTextView.h"
 #import "ChatUser.h"
 #import "StickerCell.h"
+#import "ASIFormDataRequest.h"
 
 #define KB_HEIGHT 216
 #define STICKER_TABLE_HEIGHT 60
@@ -20,11 +21,13 @@
 @interface ChatViewController ()
 <   UITableViewDataSource,
     UITableViewDelegate,
-    HPGrowingTextViewDelegate
+    HPGrowingTextViewDelegate,
+    UITextViewDelegate
 >
 
 @property (nonatomic, retain) ChatUser *user;
 @property (nonatomic, retain) ChatUser *friend;
+@property (nonatomic, retain) NSTimer *refreshTimer;
 
 @end
 
@@ -53,6 +56,12 @@
 												 selector:@selector(keyboardWillHide:)
 													 name:UIKeyboardWillHideNotification
 												   object:nil];
+        self.refreshTimer =
+        [[NSTimer scheduledTimerWithTimeInterval:1
+                                          target:self
+                                        selector:@selector(refresh)
+                                        userInfo:nil
+                                         repeats:YES] retain];
     }
     return self;
 }
@@ -61,6 +70,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.navigationController.navigationBar.translucent = NO;
     
     // layout UI elements
     self.view.backgroundColor = [UIColor colorWithRed:219.0f/255.0f green:226.0f/255.0f blue:237.0f/255.0f alpha:1];
@@ -71,7 +81,7 @@
     self.textView.contentInset = UIEdgeInsetsMake(0, 5, 0, 5);
     
 	self.textView.minNumberOfLines = 1;
-	self.textView.maxNumberOfLines = 6;
+	self.textView.maxNumberOfLines = 10;
 	self.textView.returnKeyType = UIReturnKeyGo; //just as an example
 	self.textView.font = [UIFont systemFontOfSize:15.0f];
 	self.textView.delegate = self;
@@ -126,19 +136,18 @@
     ///////////////////////////////////////////////////////////////////////////
     // Sticker
     ///////////////////////////////////////////////////////////////////////////
-    CGSize stickTableSize = CGSizeMake(STICKER_TABLE_HEIGHT, WINSIZE.width);
-    [self configStickerTable];
+//    CGSize stickTableSize = CGSizeMake(STICKER_TABLE_HEIGHT, WINSIZE.width);
+//    [self configStickerTable];
 
     // Chat view
     //
-    self.chatView = [[HPGrowingTextView alloc] initWithFrame:CGRectMake(0, 0, WINSIZE.width, WINSIZE.height - KB_HEIGHT - stickTableSize.width - self.textView.bounds.size.height - 44)];
+    self.chatView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, WINSIZE.width, WINSIZE.height - KB_HEIGHT - self.textView.bounds.size.height - 44)];
     self.chatView.delegate = self;
-    self.chatView.minNumberOfLines = 10;
     self.chatView.backgroundColor = [UIColor colorWithRed:219.0f/255.0f green:226.0f/255.0f blue:237.0f/255.0f alpha:1];
     self.chatView.editable = NO;
     self.chatView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     
-    [self.view addSubview:self.stickerTable];
+//    [self.view addSubview:self.stickerTable];
     [self.view addSubview:self.chatView];
 }
 
@@ -158,6 +167,9 @@
 
 -(void)dealloc
 {
+    [self.refreshTimer invalidate];
+    self.refreshTimer = nil;
+    
     self.chatView = nil;
     self.containerView = nil;
     self.textView = nil;
@@ -322,12 +334,16 @@
         r.size.height = MAX(r.size.height, minHeight);
         self.chatView.frame = r;
         
-        CGFloat offset = self.chatView.internalTextView.contentSize.height - self.chatView.bounds.size.height;
-        CGPoint contentOff = self.chatView.internalTextView.contentOffset;
-        contentOff.y = contentOff.y + offset;
-        self.chatView.internalTextView.contentOffset = contentOff;
+//        CGFloat offset = self.chatView.internalTextView.contentSize.height - self.chatView.bounds.size.height;
+//        CGPoint contentOff = self.chatView.internalTextView.contentOffset;
+//        contentOff.y = contentOff.y + offset;
+//        self.chatView.internalTextView.contentOffset = contentOff;
     }
 }
 
+- (void)refresh
+{
+    
+}
 
 @end
