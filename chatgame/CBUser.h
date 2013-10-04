@@ -17,3 +17,7 @@
 + (NSArray *)robots;
 - (NSString *)randomPhrase;
 @end
+
+@interface AngelaRobot : CBUserRobot
+@end
+

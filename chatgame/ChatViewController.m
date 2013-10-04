@@ -15,6 +15,7 @@
 #import "CBUser.h"
 #import "StickerCell.h"
 #import "ASIFormDataRequest.h"
+#import "ChatHistoryViewController.h"
 
 #define KB_HEIGHT 216
 #define STICKER_TABLE_HEIGHT 60
@@ -26,6 +27,7 @@
     UITextViewDelegate
 >
 
+@property (nonatomic, copy) NSString *history;
 @property (nonatomic, retain) ChatUser *user;
 @property (nonatomic, retain) CBUserRobot *robot;
 @property (nonatomic, retain) NSTimer *refreshTimer;
@@ -36,10 +38,16 @@
 @synthesize user = _user;
 @synthesize robot = _robot;
 
-- (id)initWithUser:(ChatUser *)user andFriend:(CBUserRobot *)robot
+- (id)initWithUser:(ChatUser *)user andFriend:(CBUserRobot *)robot history:(NSString *)history
 {
     self = [self init];
     if (self) {
+        self.navigationItem.rightBarButtonItem =
+        [[[UIBarButtonItem alloc] initWithTitle:@"Explore"
+                                          style:UIBarButtonItemStyleDone
+                                         target:self
+                                         action:@selector(handleExploreButtonPressed:)]
+         autorelease];
         // Custom initialization
         self.textView = [[[HPGrowingTextView alloc] init] autorelease];
         self.stickerTable = [[[UITableView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)
@@ -47,17 +55,18 @@
                              autorelease];
         self.user = user;
         self.robot = robot;
+        self.history = history;
         
-//        [[NSNotificationCenter defaultCenter] addObserver:self
-//												 selector:@selector(keyboardWillShow:)
-//													 name:UIKeyboardWillShowNotification
-//												   object:nil];
-//		
-//		[[NSNotificationCenter defaultCenter] addObserver:self
-//												 selector:@selector(keyboardWillHide:)
-//													 name:UIKeyboardWillHideNotification
-//												   object:nil];
-//        
+        //        [[NSNotificationCenter defaultCenter] addObserver:self
+        //												 selector:@selector(keyboardWillShow:)
+        //													 name:UIKeyboardWillShowNotification
+        //												   object:nil];
+        //
+        //		[[NSNotificationCenter defaultCenter] addObserver:self
+        //												 selector:@selector(keyboardWillHide:)
+        //													 name:UIKeyboardWillHideNotification
+        //												   object:nil];
+        //
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(keyboardDidChangeFrame:)
                                                      name:UIKeyboardDidChangeFrameNotification
@@ -71,6 +80,17 @@
                                          repeats:YES] retain];
     }
     return self;
+}
+
+- (id)initWithUser:(ChatUser *)user andFriend:(CBUserRobot *)robot
+{
+    return [self initWithUser:user andFriend:robot history:nil];
+}
+
+- (void)handleExploreButtonPressed:(id)sender
+{
+    ChatHistoryViewController *vc = [[[ChatHistoryViewController alloc] init] autorelease];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)viewDidLoad
@@ -150,7 +170,7 @@
     self.chatView.backgroundColor = [UIColor colorWithRed:219.0f/255.0f green:226.0f/255.0f blue:237.0f/255.0f alpha:1];
     self.chatView.editable = NO;
     self.chatView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-
+    self.chatView.text = self.history;
 #if 0
     self.chatView = [[HPGrowingTextView alloc] initWithFrame:CGRectMake(0, 0, WINSIZE.width, WINSIZE.height - KB_HEIGHT - self.textView.bounds.size.height - 44)];
     self.chatView.delegate = self;

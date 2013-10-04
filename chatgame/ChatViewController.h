@@ -19,5 +19,7 @@
 @property (nonatomic, retain) UITableView *stickerTable;
 
 - (id)initWithUser:(ChatUser *)user andFriend:(CBUserRobot *)robot;
+- (id)initWithUser:(ChatUser *)user andFriend:(CBUserRobot *)robot history:(NSString *)history;
+
 
 @end
