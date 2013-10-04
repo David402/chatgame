@@ -29,5 +29,3 @@
 #import "UIViewController+CB.h"
 #import "UINavigationController+CB.h"
 #import "UITableView+CB.h"
-
-#import "ALAssetsLibrary+CB.h"
