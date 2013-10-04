@@ -17,6 +17,21 @@
 			<string>OH.MY.GOD</string>
 			<string>Please order dinner before 18:30</string>
 			<string>Yo Yo Yo</string>
+			<string>我要尿尿</string>
+			<string>ok, this is SO RIDICULOUS</string>
+			<string>You&apos;re joking!</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>YY</string>
+		<key>phrases</key>
+		<array>
+			<string>等一下嘛！</string>
+			<string>這很快，這很快。</string>
+			<string>喔。</string>
+			<string>Yes!</string>
+			<string>Skip me</string>
 		</array>
 	</dict>
 	<dict>
@@ -54,6 +69,7 @@
 			<string>er</string>
 			<string>What?!</string>
 			<string>我要吐</string>
+			<string>好煩哦！</string>
 		</array>
 	</dict>
 	<dict>
@@ -65,6 +81,15 @@
 			<string>我要增肥</string>
 			<string>嗚嗚嗚</string>
 			<string>哈哈哈哈哈哈哈</string>
+			<string>Lunch?</string>
+			<string>What?!</string>
+			<string>吼唷</string>
+			<string>有事嗎？</string>
+			<string>隨！</string>
+			<string>Hola</string>
+			<string>huh?</string>
+			<string>BHX</string>
+			<string>pila</string>
 		</array>
 	</dict>
 	<dict>
@@ -77,6 +102,14 @@
 			<string>我要吃麥當勞</string>
 			<string>齁 YY</string>
 			<string>Ya!</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Fumin</string>
+		<key>phrases</key>
+		<array>
+			<string>Thanks</string>
 		</array>
 	</dict>
 </array>
