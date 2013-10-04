@@ -82,6 +82,7 @@
 		FB8C810317FEB4B300ED98CC /* UIView+CB.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8C80E817FEB4B300ED98CC /* UIView+CB.m */; };
 		FB8C810417FEB4B300ED98CC /* UIViewController+CB.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8C80EA17FEB4B300ED98CC /* UIViewController+CB.m */; };
 		FB8C810617FEB85800ED98CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8C810517FEB85800ED98CC /* QuartzCore.framework */; };
+		FB8C810917FED33B00ED98CC /* ChatHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8C810817FED33B00ED98CC /* ChatHistoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -216,6 +217,8 @@
 		FB8C80E917FEB4B300ED98CC /* UIViewController+CB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CB.h"; sourceTree = "<group>"; };
 		FB8C80EA17FEB4B300ED98CC /* UIViewController+CB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CB.m"; sourceTree = "<group>"; };
 		FB8C810517FEB85800ED98CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FB8C810717FED33B00ED98CC /* ChatHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChatHistoryViewController.h; path = ../ChatHistoryViewController.h; sourceTree = "<group>"; };
+		FB8C810817FED33B00ED98CC /* ChatHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChatHistoryViewController.m; path = ../ChatHistoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +336,8 @@
 				D78DDABB16BBA21A0079CE7C /* ArenaViewController.m */,
 				D78DDAC116BBA21A0079CE7C /* ChatListViewController.h */,
 				D78DDAC216BBA21A0079CE7C /* ChatListViewController.m */,
+				FB8C810717FED33B00ED98CC /* ChatHistoryViewController.h */,
+				FB8C810817FED33B00ED98CC /* ChatHistoryViewController.m */,
 				D78DDABD16BBA21A0079CE7C /* first.png */,
 				D78DDABF16BBA21A0079CE7C /* first@2x.png */,
 				D78DDAC416BBA21A0079CE7C /* second.png */,
@@ -582,6 +587,7 @@
 				FB8C80EC17FEB4B300ED98CC /* CBToolkitCGGeometry.m in Sources */,
 				FB8C80ED17FEB4B300ED98CC /* CBToolkitHelper.m in Sources */,
 				FB8C80EF17FEB4B300ED98CC /* NSCharacterSet+CB.m in Sources */,
+				FB8C810917FED33B00ED98CC /* ChatHistoryViewController.m in Sources */,
 				D7485C6816BBD62400F45277 /* ASIFormDataRequest.m in Sources */,
 				D7485C6916BBD62400F45277 /* ASIHTTPRequest.m in Sources */,
 				D7485C6A16BBD62400F45277 /* ASIInputStream.m in Sources */,

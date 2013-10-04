@@ -34,3 +34,17 @@
     return [self.phrases objectAtIndex:randomIndex];
 }
 @end
+
+@implementation AngelaRobot
+
+- (NSString *)name
+{
+    return @"Angela";
+}
+
+- (NSString *)randomPhrase
+{
+    return @"= =";
+}
+
+@end
