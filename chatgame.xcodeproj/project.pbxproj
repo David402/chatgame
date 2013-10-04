@@ -55,7 +55,6 @@
 		D78DDB0116BBB3190079CE7C /* StickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D78DDB0016BBB3190079CE7C /* StickerCell.m */; };
 		FB8C80AE17FEB16F00ED98CC /* CBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8C80AD17FEB16F00ED98CC /* CBUser.m */; };
 		FB8C80B017FEB2EF00ED98CC /* robots.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8C80AF17FEB2EF00ED98CC /* robots.plist */; };
-		FB8C80EB17FEB4B300ED98CC /* ALAssetsLibrary+CB.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8C80B417FEB4B300ED98CC /* ALAssetsLibrary+CB.m */; };
 		FB8C80EC17FEB4B300ED98CC /* CBToolkitCGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8C80B817FEB4B300ED98CC /* CBToolkitCGGeometry.m */; };
 		FB8C80ED17FEB4B300ED98CC /* CBToolkitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8C80BA17FEB4B300ED98CC /* CBToolkitHelper.m */; };
 		FB8C80EE17FEB4B300ED98CC /* NSArray+CB.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8C80BD17FEB4B300ED98CC /* NSArray+CB.m */; };
@@ -81,6 +80,7 @@
 		FB8C810217FEB4B300ED98CC /* UIToolbar+CB.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8C80E617FEB4B300ED98CC /* UIToolbar+CB.m */; };
 		FB8C810317FEB4B300ED98CC /* UIView+CB.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8C80E817FEB4B300ED98CC /* UIView+CB.m */; };
 		FB8C810417FEB4B300ED98CC /* UIViewController+CB.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8C80EA17FEB4B300ED98CC /* UIViewController+CB.m */; };
+		FB8C810617FEB85800ED98CC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8C810517FEB85800ED98CC /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,8 +161,6 @@
 		FB8C80AC17FEB16F00ED98CC /* CBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBUser.h; sourceTree = "<group>"; };
 		FB8C80AD17FEB16F00ED98CC /* CBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBUser.m; sourceTree = "<group>"; };
 		FB8C80AF17FEB2EF00ED98CC /* robots.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = robots.plist; sourceTree = "<group>"; };
-		FB8C80B317FEB4B300ED98CC /* ALAssetsLibrary+CB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALAssetsLibrary+CB.h"; sourceTree = "<group>"; };
-		FB8C80B417FEB4B300ED98CC /* ALAssetsLibrary+CB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CB.m"; sourceTree = "<group>"; };
 		FB8C80B517FEB4B300ED98CC /* CBCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCategories.h; sourceTree = "<group>"; };
 		FB8C80B617FEB4B300ED98CC /* CBToolkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBToolkit.h; sourceTree = "<group>"; };
 		FB8C80B717FEB4B300ED98CC /* CBToolkitCGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBToolkitCGGeometry.h; sourceTree = "<group>"; };
@@ -215,6 +213,7 @@
 		FB8C80E817FEB4B300ED98CC /* UIView+CB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CB.m"; sourceTree = "<group>"; };
 		FB8C80E917FEB4B300ED98CC /* UIViewController+CB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CB.h"; sourceTree = "<group>"; };
 		FB8C80EA17FEB4B300ED98CC /* UIViewController+CB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CB.m"; sourceTree = "<group>"; };
+		FB8C810517FEB85800ED98CC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8C810617FEB85800ED98CC /* QuartzCore.framework in Frameworks */,
 				D7485C7916BBDFCD00F45277 /* libz.dylib in Frameworks */,
 				D7485C7716BBDFB000F45277 /* MobileCoreServices.framework in Frameworks */,
 				D7485C7516BBDFA900F45277 /* SystemConfiguration.framework in Frameworks */,
@@ -301,6 +301,7 @@
 		D78DDAA116BBA21A0079CE7C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB8C810517FEB85800ED98CC /* QuartzCore.framework */,
 				D7485C7616BBDFB000F45277 /* MobileCoreServices.framework */,
 				D7485C7416BBDFA900F45277 /* SystemConfiguration.framework */,
 				D7485C7216BBDF3700F45277 /* CFNetwork.framework */,
@@ -386,8 +387,6 @@
 		FB8C80B217FEB4B300ED98CC /* CBToolkit */ = {
 			isa = PBXGroup;
 			children = (
-				FB8C80B317FEB4B300ED98CC /* ALAssetsLibrary+CB.h */,
-				FB8C80B417FEB4B300ED98CC /* ALAssetsLibrary+CB.m */,
 				FB8C80B517FEB4B300ED98CC /* CBCategories.h */,
 				FB8C80B617FEB4B300ED98CC /* CBToolkit.h */,
 				FB8C80B717FEB4B300ED98CC /* CBToolkitCGGeometry.h */,
@@ -559,7 +558,6 @@
 				FB8C80F517FEB4B300ED98CC /* NSMutableSet+CB.m in Sources */,
 				D78DDAE016BBA27C0079CE7C /* HPTextViewInternal.m in Sources */,
 				FB8C80F917FEB4B300ED98CC /* NSSet+CB.m in Sources */,
-				FB8C80EB17FEB4B300ED98CC /* ALAssetsLibrary+CB.m in Sources */,
 				FB8C80FA17FEB4B300ED98CC /* NSString+CB.m in Sources */,
 				FB8C80F217FEB4B300ED98CC /* NSIndexSet+CB.m in Sources */,
 				D78DDAEE16BBA4970079CE7C /* AccountViewController.m in Sources */,
