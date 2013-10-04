@@ -18,7 +18,7 @@
 @implementation CBUserRobot
 + (NSArray *)robots
 {
-    NSArray *array = [NSDictionary dictionaryWithContentsOfFile:BUNDLE_DIRECTORY_PATH(@"robots.plist")];
+    NSArray *array = [NSArray arrayWithContentsOfFile:BUNDLE_DIRECTORY_PATH(@"robots.plist")];
     NSArray *robots = [array collect:^id(NSDictionary *info) {
         CBUserRobot *u = [[[CBUserRobot alloc] init] autorelease];
         u.name = [info objectForKey:@"name"];
