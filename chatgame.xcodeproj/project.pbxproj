@@ -29,6 +29,7 @@
 		D7485C7516BBDFA900F45277 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7485C7416BBDFA900F45277 /* SystemConfiguration.framework */; };
 		D7485C7716BBDFB000F45277 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7485C7616BBDFB000F45277 /* MobileCoreServices.framework */; };
 		D7485C7916BBDFCD00F45277 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7485C7816BBDFCD00F45277 /* libz.dylib */; };
+		D7547E6617FEDD6200D21EE1 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = D7547E6517FEDD6200D21EE1 /* Icon-120.png */; };
 		D78DDAA316BBA21A0079CE7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DDAA216BBA21A0079CE7C /* UIKit.framework */; };
 		D78DDAA516BBA21A0079CE7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DDAA416BBA21A0079CE7C /* Foundation.framework */; };
 		D78DDAA716BBA21A0079CE7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78DDAA616BBA21A0079CE7C /* CoreGraphics.framework */; };
@@ -120,6 +121,7 @@
 		D7485C7416BBDFA900F45277 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D7485C7616BBDFB000F45277 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D7485C7816BBDFCD00F45277 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D7547E6517FEDD6200D21EE1 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		D78DDA9E16BBA21A0079CE7C /* chatgame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatgame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78DDAA216BBA21A0079CE7C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D78DDAA416BBA21A0079CE7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -282,6 +284,7 @@
 		D78DDA9316BBA21A0079CE7C = {
 			isa = PBXGroup;
 			children = (
+				D7547E6517FEDD6200D21EE1 /* Icon-120.png */,
 				D7485C7816BBDFCD00F45277 /* libz.dylib */,
 				D78DDAA816BBA21A0079CE7C /* chatgame */,
 				D78DDAA116BBA21A0079CE7C /* Frameworks */,
@@ -526,6 +529,7 @@
 				D7485C4916BBBE9700F45277 /* MessageEntryInputField.png in Resources */,
 				D7485C4A16BBBE9700F45277 /* MessageEntryInputField@2x.png in Resources */,
 				D7485C4B16BBBE9700F45277 /* MessageEntrySendButton.png in Resources */,
+				D7547E6617FEDD6200D21EE1 /* Icon-120.png in Resources */,
 				D7485C4C16BBBE9700F45277 /* MessageEntrySendButton@2x.png in Resources */,
 				D7485C4D16BBBE9700F45277 /* MessageEntrySendButtonPressed.png in Resources */,
 				FB8C80B017FEB2EF00ED98CC /* robots.plist in Resources */,
