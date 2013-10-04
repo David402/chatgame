@@ -38,7 +38,8 @@
         accountViewController = [[[AccountViewController alloc] initWithNibName:@"AccountViewController" bundle:nil] autorelease];
     }
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = @[arenaNavController, chatListNavController, accountViewController];
+//    self.tabBarController.viewControllers = @[arenaNavController, chatListNavController, accountViewController];
+    self.tabBarController.viewControllers = @[chatListNavController, accountViewController];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
