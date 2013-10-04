@@ -146,6 +146,14 @@
     self.chatView.backgroundColor = [UIColor colorWithRed:219.0f/255.0f green:226.0f/255.0f blue:237.0f/255.0f alpha:1];
     self.chatView.editable = NO;
     self.chatView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+
+#if 0
+    self.chatView = [[HPGrowingTextView alloc] initWithFrame:CGRectMake(0, 0, WINSIZE.width, WINSIZE.height - KB_HEIGHT - self.textView.bounds.size.height - 44)];
+    self.chatView.delegate = self;
+    self.chatView.backgroundColor = [UIColor colorWithRed:219.0f/255.0f green:226.0f/255.0f blue:237.0f/255.0f alpha:1];
+    self.chatView.editable = NO;
+    self.chatView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+#endif
     
 //    [self.view addSubview:self.stickerTable];
     [self.view addSubview:self.chatView];
@@ -249,10 +257,14 @@
 - (void)sendText
 {
     NSString *text = self.textView.text;
-    NSString *newText = [self.chatView.text stringByAppendingFormat:@"%@: %@\n",self.user.username, text];
+    NSString *name = (self.user.username == nil || [self.user.username isEqualToString:@""]) ? @"guest" : self.user.username;
+    NSString *newText = [self.chatView.text stringByAppendingFormat:@"%@: %@\n", name, text];
     self.chatView.text = newText;
 //    self.chatView.attributedText = @"";
     self.textView.text = @"";
+    
+    // Scroll to bottom
+    [self.chatView scrollRangeToVisible:NSMakeRange([self.chatView.text length], 0)];
 }
 
 -(void)resignTextView
