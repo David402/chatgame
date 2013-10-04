@@ -11,12 +11,14 @@
 #import "Utils.h"
 #import "Configuration.h"
 #import "ChatUser.h"
+#import "CBUser.h"
 #import "ChatViewController.h"
 #import "AccountViewController.h"
 
 @interface ChatListViewController ()
     <UITableViewDataSource, UITableViewDelegate>
 @property (retain, nonatomic) IBOutlet UITableView *chatListTable;
+@property (retain, nonatomic) NSArray *robots;
 
 @end
 
@@ -38,6 +40,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.chatListTable.dataSource = self;
     self.chatListTable.delegate = self;
+    self.robots = [CBUserRobot robots];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,7 +61,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return [self.robots count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -76,7 +79,7 @@
     }
     
 //    UIImage *image = [self.user.stickers objectAtIndex:indexPath.row];
-    cell.textLabel.text = @"chat with xx";
+    cell.textLabel.text = [NSString stringWithFormat:@"chat with robot %@", [[self.robots objectAtIndex:indexPath.row] name]];
     
     return cell;
 }
@@ -86,25 +89,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-#warning add selection action
-    if (indexPath.row == 0)
-    {
-        
-        ChatUser *user1 = [[[ChatUser alloc] init] autorelease];
-        user1.username = @"1";
-        user1.stickers = [NSArray array];
-        
-        
-        ChatUser *user2 = [[[ChatUser alloc] init] autorelease];
-        user1.username = @"2";
-        user1.stickers = [NSArray array];
-        
-        ChatViewController *chatViewController = [[ChatViewController alloc] initWithUser:[[AccountViewController shared] user] andFriend:user2];
-        
-        // Clear selection
-        [self.chatListTable deselectRowAtIndexPath:indexPath animated:YES];
-        
-        [self.navigationController pushViewController:chatViewController animated:YES];
-    }
+    ChatUser *user1 = [[[ChatUser alloc] init] autorelease];
+    user1.username = @"1";
+    user1.stickers = [NSArray array];
+    
+    ChatViewController *chatViewController = [[ChatViewController alloc] initWithUser:[[AccountViewController shared] user] andFriend:[self.robots objectAtIndex:indexPath.row]];
+    
+    // Clear selection
+    [self.chatListTable deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self.navigationController pushViewController:chatViewController animated:YES];
 }
 @end

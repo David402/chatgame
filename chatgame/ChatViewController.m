@@ -27,16 +27,16 @@
 >
 
 @property (nonatomic, retain) ChatUser *user;
-@property (nonatomic, retain) ChatUser *friend;
+@property (nonatomic, retain) CBUserRobot *robot;
 @property (nonatomic, retain) NSTimer *refreshTimer;
 
 @end
 
 @implementation ChatViewController
 @synthesize user = _user;
-@synthesize friend = _friend;
+@synthesize robot = _robot;
 
-- (id)initWithUser:(ChatUser *)user andFriend:(ChatUser *)friend
+- (id)initWithUser:(ChatUser *)user andFriend:(CBUserRobot *)robot
 {
     self = [self init];
     if (self) {
@@ -46,7 +46,7 @@
                                                           style:UITableViewStylePlain]
                              autorelease];
         self.user = user;
-        self.friend = friend;
+        self.robot = robot;
         
         [[NSNotificationCenter defaultCenter] addObserver:self
 												 selector:@selector(keyboardWillShow:)
@@ -184,7 +184,7 @@
     self.textView = nil;
     self.stickerTable = nil;
     self.user = nil;
-    self.friend = nil;
+    self.robot = nil;
     [super dealloc];
 }
 
@@ -268,7 +268,7 @@
     [self.chatView scrollRangeToVisible:NSMakeRange([self.chatView.text length], 0)];
     
     // Robot answer
-    NSString *robotAnswer = [[[CBUserRobot robots] objectAtIndex:0] randomPhrase];
+    NSString *robotAnswer = [self.robot randomPhrase];
     [self performSelector:@selector(sendWithText:) withObject:robotAnswer afterDelay:0.5];
 }
 
@@ -278,7 +278,7 @@
         return;
     }
     
-    NSString *newText = [self.chatView.text stringByAppendingString:text];
+    NSString *newText = [self.chatView.text stringByAppendingFormat:@"%@: %@\n", self.robot.name, text];
     self.chatView.text = newText;
     self.textView.text = @"";
     
