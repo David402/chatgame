@@ -21,5 +21,6 @@
 - (id)initWithUser:(ChatUser *)user andFriend:(CBUserRobot *)robot;
 - (id)initWithUser:(ChatUser *)user andFriend:(CBUserRobot *)robot history:(NSString *)history;
 
+- (id)initWithUser:(ChatUser *)user andFriends:(NSArray *)robots;
 
 @end
