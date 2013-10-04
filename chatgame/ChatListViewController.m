@@ -61,7 +61,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.robots count];
+    return [self.robots count] + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -79,7 +79,11 @@
     }
     
 //    UIImage *image = [self.user.stickers objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"chat with robot %@", [[self.robots objectAtIndex:indexPath.row] name]];
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"chat with Cbluers";
+    } else {
+        cell.textLabel.text = [NSString stringWithFormat:@"chat with robot %@", [[self.robots objectAtIndex:indexPath.row - 1] name]];
+    }
     
     return cell;
 }
@@ -93,7 +97,14 @@
     user1.username = @"1";
     user1.stickers = [NSArray array];
     
-    ChatViewController *chatViewController = [[ChatViewController alloc] initWithUser:[[AccountViewController shared] user] andFriend:[self.robots objectAtIndex:indexPath.row]];
+    ChatUser *me = [[AccountViewController shared] user];
+    ChatViewController *chatViewController;
+    if (indexPath.row == 0) {
+        chatViewController = [[ChatViewController alloc] initWithUser:me andFriends:self.robots];
+    } else {
+        chatViewController = [[ChatViewController alloc] initWithUser:me andFriend:[self.robots objectAtIndex:indexPath.row - 1]];
+        
+    }
     
     // Clear selection
     [self.chatListTable deselectRowAtIndexPath:indexPath animated:YES];

@@ -28,6 +28,7 @@
 
 @property (nonatomic, retain) ChatUser *user;
 @property (nonatomic, retain) CBUserRobot *robot;
+@property (nonatomic, retain) NSArray *robots;
 @property (nonatomic, retain) NSTimer *refreshTimer;
 
 @end
@@ -72,6 +73,34 @@
     }
     return self;
 }
+
+- (id)initWithUser:(ChatUser *)user andFriends:(NSArray *)robots
+{
+    self = [self init];
+    if (self) {
+        // Custom initialization
+        self.textView = [[[HPGrowingTextView alloc] init] autorelease];
+        self.stickerTable = [[[UITableView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)
+                                                          style:UITableViewStylePlain]
+                             autorelease];
+        self.user = user;
+        self.robots = robots;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardDidChangeFrame:)
+                                                     name:UIKeyboardDidChangeFrameNotification
+                                                   object:nil];
+        
+        self.refreshTimer =
+        [[NSTimer scheduledTimerWithTimeInterval:1
+                                          target:self
+                                        selector:@selector(refresh)
+                                        userInfo:nil
+                                         repeats:YES] retain];
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad
 {
@@ -271,6 +300,11 @@
 
 #pragma mark -
 
+double rand_range(double min_n, double max_n)
+{
+    return (double)rand()/RAND_MAX * (max_n - min_n) + min_n;
+}
+
 - (void)sendText
 {
     NSString *text = self.textView.text;
@@ -284,8 +318,15 @@
     [self.chatView scrollRangeToVisible:NSMakeRange([self.chatView.text length], 0)];
     
     // Robot answer
-    NSString *robotAnswer = [self.robot randomPhrase];
-    [self performSelector:@selector(sendWithText:) withObject:robotAnswer afterDelay:0.5];
+    NSUInteger randomIndex = MAX(arc4random() % [self.robots count], 1);
+    for (int i = 0; i < randomIndex; i++) {
+        NSUInteger userIndex = arc4random() % [self.robots count];
+        CBUserRobot *robot = self.robots[userIndex];
+        NSString *robotAnswer = [robot randomPhrase];
+        NSString *text = [NSString stringWithFormat:@"%@: %@\n", [robot name], robotAnswer];
+        double randDelay = rand_range(0.5, 1.0);
+        [self performSelector:@selector(sendWithText:) withObject:text afterDelay:randDelay];
+    }
 }
 
 - (void)sendWithText:(NSString *)text
@@ -294,8 +335,7 @@
         return;
     }
     
-    NSString *newText = [self.chatView.text stringByAppendingFormat:@"%@: %@\n", self.robot.name, text];
-    self.chatView.text = newText;
+    self.chatView.text = [self.chatView.text stringByAppendingString:text];
     self.textView.text = @"";
     
     // Scroll to bottom
