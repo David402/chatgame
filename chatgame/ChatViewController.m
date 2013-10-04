@@ -12,6 +12,7 @@
 #import "ChatViewController.h"
 #import "HPGrowingTextView.h"
 #import "ChatUser.h"
+#import "CBUser.h"
 #import "StickerCell.h"
 #import "ASIFormDataRequest.h"
 
@@ -261,6 +262,24 @@
     NSString *newText = [self.chatView.text stringByAppendingFormat:@"%@: %@\n", name, text];
     self.chatView.text = newText;
 //    self.chatView.attributedText = @"";
+    self.textView.text = @"";
+    
+    // Scroll to bottom
+    [self.chatView scrollRangeToVisible:NSMakeRange([self.chatView.text length], 0)];
+    
+    // Robot answer
+    NSString *robotAnswer = [[[CBUserRobot robots] objectAtIndex:0] randomPhrase];
+    [self performSelector:@selector(sendWithText:) withObject:robotAnswer afterDelay:0.5];
+}
+
+- (void)sendWithText:(NSString *)text
+{
+    if (!text) {
+        return;
+    }
+    
+    NSString *newText = [self.chatView.text stringByAppendingString:text];
+    self.chatView.text = newText;
     self.textView.text = @"";
     
     // Scroll to bottom
